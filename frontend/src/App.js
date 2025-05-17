@@ -17,6 +17,7 @@ import Documentation from './pages/documentation';
 import About from './pages/about';
 import MusicPlayer from './pages/music-player';
 import Calculator from './pages/calculator';
+import SavingsTracker from './pages/savings-tracker';
 
 // Auth components
 import { AuthProvider, useAuth } from './AuthContext';
@@ -37,6 +38,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/music-player" element={<MusicPlayer />} />
             <Route path="/calculator" element={<Calculator />} />
+            <Route path="/savings-tracker" element={<SavingsTracker />} />
           </Routes>
           <Footer />
           <AuthModal />
@@ -98,6 +100,7 @@ function Navbar() {
           <Link to="/about">About</Link>
           <Link to="/music-player">Music Player</Link>
           <Link to="/calculator">Calculator</Link>
+          <Link to="/savings-tracker">Savings Tracker</Link>
         </nav>
 
         <AuthButtons />
@@ -120,6 +123,7 @@ function Navbar() {
             <Link to="/about">About</Link>
             <Link to="/music-player">Music Player</Link>
             <Link to="/calculator">Calculator</Link>
+            <Link to="/savings-tracker">Savings Tracker</Link>
             {user ? (
               <>
                 <div className="mobile-user-info">
@@ -155,6 +159,7 @@ function Hero() {
           <div className="hero-cta">
             <Link to="/music-player" className="btn-primary btn-large">Music Player</Link>
             <Link to="/calculator" className="btn-primary btn-large">Calculator</Link>
+            <Link to="/savings-tracker" className="btn-primary btn-large">Savings Tracker</Link>
             <Link to="/documentation" className="btn-outline btn-large">Get Started</Link>
           </div>
         </motion.div>
@@ -203,6 +208,11 @@ function FeaturesSection() {
       icon: <CodeBracketIcon className="feature-icon" />,
       title: 'Calculator',
       description: 'A simple calculator for basic arithmetic operations.'
+    },
+    {
+      icon: <ArrowRightIcon className="feature-icon" />,
+      title: 'Savings Tracker',
+      description: 'Track your savings and financial goals easily.'
     }
   ];
 
@@ -248,6 +258,7 @@ function Footer() {
             <Link to="/about">About</Link>
             <Link to="/music-player">Music Player</Link>
             <Link to="/calculator">Calculator</Link>
+            <Link to="/savings-tracker">Savings Tracker</Link>
           </div>
           <div className="footer-copyright">
             &copy; {new Date().getFullYear()} React+Node.JS Lite. All rights reserved.
