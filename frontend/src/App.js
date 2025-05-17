@@ -16,6 +16,7 @@ import Pricing from './pages/pricing';
 import Documentation from './pages/documentation';
 import About from './pages/about';
 import MusicPlayer from './pages/music-player';
+import Calculator from './pages/calculator';
 
 // Auth components
 import { AuthProvider, useAuth } from './AuthContext';
@@ -35,6 +36,7 @@ function App() {
             <Route path="/documentation" element={<Documentation />} />
             <Route path="/about" element={<About />} />
             <Route path="/music-player" element={<MusicPlayer />} />
+            <Route path="/calculator" element={<Calculator />} />
           </Routes>
           <Footer />
           <AuthModal />
@@ -95,6 +97,7 @@ function Navbar() {
           <Link to="/documentation">Documentation</Link>
           <Link to="/about">About</Link>
           <Link to="/music-player">Music Player</Link>
+          <Link to="/calculator">Calculator</Link>
         </nav>
 
         <AuthButtons />
@@ -116,6 +119,7 @@ function Navbar() {
             <Link to="/documentation">Documentation</Link>
             <Link to="/about">About</Link>
             <Link to="/music-player">Music Player</Link>
+            <Link to="/calculator">Calculator</Link>
             {user ? (
               <>
                 <div className="mobile-user-info">
@@ -150,6 +154,7 @@ function Hero() {
           <p className="hero-subtitle">A minimalist, AI-friendly template for rapid SaaS development.</p>
           <div className="hero-cta">
             <Link to="/music-player" className="btn-primary btn-large">Music Player</Link>
+            <Link to="/calculator" className="btn-primary btn-large">Calculator</Link>
             <Link to="/documentation" className="btn-outline btn-large">Get Started</Link>
           </div>
         </motion.div>
@@ -193,6 +198,11 @@ function FeaturesSection() {
       icon: <MusicalNoteIcon className="feature-icon" />,
       title: 'Music Player',
       description: 'A built-in music player'
+    },
+    {
+      icon: <CodeBracketIcon className="feature-icon" />,
+      title: 'Calculator',
+      description: 'A simple calculator for basic arithmetic operations.'
     }
   ];
 
@@ -237,6 +247,7 @@ function Footer() {
             <Link to="/documentation">Docs</Link>
             <Link to="/about">About</Link>
             <Link to="/music-player">Music Player</Link>
+            <Link to="/calculator">Calculator</Link>
           </div>
           <div className="footer-copyright">
             &copy; {new Date().getFullYear()} React+Node.JS Lite. All rights reserved.
