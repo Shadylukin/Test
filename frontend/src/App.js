@@ -180,37 +180,37 @@ function Hero() {
 function FeaturesSection() {
   const features = [
     {
-      icon: <CodeBracketIcon className="feature-icon" />,
+      icon: <CodeBracketIcon className="feature-icon" />, 
       title: 'React Frontend',
       description: 'Lightweight and performant React components for a modern UI.'
     },
     {
-      icon: <ServerIcon className="feature-icon" />,
+      icon: <ServerIcon className="feature-icon" />, 
       title: 'Node.js Backend',
       description: 'Serverless functions for a scalable and cost-effective backend.'
     },
     {
-      icon: <CubeIcon className="feature-icon" />,
+      icon: <CubeIcon className="feature-icon" />, 
       title: 'Database Integration',
       description: 'Easy integration with MongoDB for data persistence.'
     },
     {
-      icon: <ShieldCheckIcon className="feature-icon" />,
+      icon: <ShieldCheckIcon className="feature-icon" />, 
       title: 'Authentication',
       description: 'Secure authentication with Supabase for user management.'
     },
     {
-      icon: <MusicalNoteIcon className="feature-icon" />,
+      icon: <MusicalNoteIcon className="feature-icon" />, 
       title: 'Music Player',
       description: 'A built-in music player'
     },
     {
-      icon: <CodeBracketIcon className="feature-icon" />,
+      icon: <CodeBracketIcon className="feature-icon" />, 
       title: 'Calculator',
       description: 'A simple calculator for basic arithmetic operations.'
     },
     {
-      icon: <ArrowRightIcon className="feature-icon" />,
+      icon: <ArrowRightIcon className="feature-icon" />, 
       title: 'Savings Tracker',
       description: 'Track your savings and financial goals easily.'
     }
