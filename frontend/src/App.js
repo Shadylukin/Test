@@ -73,13 +73,19 @@ function AuthButtons() {
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, openAuthModal, signOut } = useAuth();
+  const [banana, setBanana] = useState(false);
+
+  const toggleBanana = () => {
+    setBanana(!banana);
+  }
 
   return (
     <header className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <MusicalNoteIcon className="icon rotating-icon" />
+          <MusicalNoteIcon className={`icon rotating-icon ${banana ? 'banana-spin' : ''}`} />
           <span>React+Node.JS Lite</span>
+          <button onClick={toggleBanana} className="banana-button">Toggle Banana Spin</button>
         </div>
 
         <nav className="desktop-menu">
@@ -109,7 +115,7 @@ function Navbar() {
             <Link to="/pricing">Pricing</Link>
             <Link to="/documentation">Documentation</Link>
             <Link to="/about">About</Link>
-           <Link to="/music-player">Music Player</Link>
+            <Link to="/music-player">Music Player</Link>
             {user ? (
               <>
                 <div className="mobile-user-info">
