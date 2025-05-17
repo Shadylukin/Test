@@ -188,6 +188,11 @@ function FeaturesSection() {
       icon: <ShieldCheckIcon className="feature-icon" />,
       title: 'Authentication',
       description: 'Secure authentication with Supabase for user management.'
+    },
+    {
+      icon: <MusicalNoteIcon className="feature-icon" />,
+      title: 'Music Player',
+      description: 'A built-in music player'
     }
   ];
 
